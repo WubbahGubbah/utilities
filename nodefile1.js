@@ -5,6 +5,9 @@ var util = require("util");
 var format = "YYYYMMMDD";
 
 var initial = "/Users/matthewwilson/Documents/ameliaiphonepix20161222/"
+var targetRoot = "/Users/matthewwilson/Documents/photos/"
+
+var copiedFiles = [];
 
 fs.readdir(initial, function( err, files) {
     if(err) {
@@ -25,10 +28,14 @@ fs.readdir(initial, function( err, files) {
 
         //next steps
         //check for folder existence
+        if (!fs.existsSync(targetRoot + formattedDate)){
+          fs.mkdirSync(targetRoot + formattedDate);
+        }
+
         //copy file from one folder to backup folder
         //add folder to copied collection
         //in the end, loop through the copied collection and verify existence before deleting
-        
+
       }
     })
 })
