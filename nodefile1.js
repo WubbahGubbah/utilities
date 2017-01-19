@@ -22,6 +22,13 @@ fs.readdir(initial, function( err, files) {
 
         //console.log(mtime);
         console.log(formattedDate);
+
+        //next steps
+        //check for folder existence
+        //copy file from one folder to backup folder
+        //add folder to copied collection
+        //in the end, loop through the copied collection and verify existence before deleting
+        
       }
     })
 })
